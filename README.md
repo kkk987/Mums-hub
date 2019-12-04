@@ -48,6 +48,10 @@ This has been developed utilising the MERN technologies. The stack includes;-
 - As an administrative user, I would like to be able to delete a blog post when a post is deemed irrelevent or unnecessary.
 - As an administrative user, I would like to be able to comment on a blog post, responding to other users comments and questions, furthering discussion. 
 - As an administrative user, I would like to be able to see a list of my blog posts as an easy to access position which helps manage the content I am putting to my audience. 
+
 ## Wireframes
+
+### Desktop & Tablet
+![desktop wireframe](docs/Desktop.png)
 
 ## Planning Methodology with Screenshots 
