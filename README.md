@@ -37,6 +37,18 @@ This has been developed utilising the MERN technologies. The stack includes;-
 ## Application Architecture Diagram 
 
 ## User Stories
+-As a user, I would like to be able to read a blog post
+-As a user, I would like to comment on a blog post
+-As a user, I would like to be able to sign in
+-As a user, I would like to be able to sign out
+-As a user, I would like to be able to sign up
+-As a user, I would like to read my dashboard
+-As a user, I would like to see tips on pregnancy on my dashboard, relative to my needs
+-As an administrative user, I would like to be able to create a blog post
+-As an administrative user, I would like to be able to edit a blog post
+-As an administrative user, I would like to be able to delete a blog post
+-As an administrative user, I would like to be able to comment on a blog post
+-As an administrative user, I would like to be able to see a list of my blog posts
 
 ## Wireframes
 
