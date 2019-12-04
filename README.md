@@ -36,18 +36,18 @@ This has been developed utilising the MERN technologies. The stack includes;-
 ## Application Architecture Diagram 
 
 ## User Stories
-- As a user, I would like to be able to read a blog post
-- As a user, I would like to comment on a blog post
-- As a user, I would like to be able to sign in
-- As a user, I would like to be able to sign out
-- As a user, I would like to be able to sign up
-- As a user, I would like to read my dashboard
+- As a user, I would like to be able to read a blog post related on child birth topics so I can be more informed on this topic.
+- As a user, I would like to comment on a blog post as I may have questions or take part in community discussion.
+- As a user, I would like to be able to sign in to my account to access information tailored to my needs. 
+- As a user, I would like to be able to sign out of my account when it is not in use.
+- As a user, I would like to be able to sign up to get information tailored to my needs. 
+- As a user, I would like to read my dashboard which displays information in a nice, easy to read layout
 - As a user, I would like to see tips on pregnancy on my dashboard, relative to my needs
-- As an administrative user, I would like to be able to create a blog post
-- As an administrative user, I would like to be able to edit a blog post
-- As an administrative user, I would like to be able to delete a blog post
-- As an administrative user, I would like to be able to comment on a blog post
-- As an administrative user, I would like to be able to see a list of my blog posts
+- As an administrative user, I would like to be able to create a blog post to inform my audience on a range of child birth related topics. 
+- As an administrative user, I would like to be able to edit a blog post as a means of fact checking and ensuring the content is of a high quality and always reliable. 
+- As an administrative user, I would like to be able to delete a blog post when a post is deemed irrelevent or unnecessary.
+- As an administrative user, I would like to be able to comment on a blog post, responding to other users comments and questions, furthering discussion. 
+- As an administrative user, I would like to be able to see a list of my blog posts as an easy to access position which helps manage the content I am putting to my audience. 
 ## Wireframes
 
 ## Planning Methodology with Screenshots 
