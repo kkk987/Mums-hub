@@ -38,9 +38,9 @@ This has been developed utilising the MERN technologies. The stack includes;-
 ## User Stories
 - As a user, I would like to be able to read a blog post related on child birth topics so I can be more informed on this topic.
 - As a user, I would like to comment on a blog post as I may have questions or take part in community discussion.
+- As a user, I would like to be able to sign up to register an account.  
 - As a user, I would like to be able to sign in to my account to access information tailored to my needs. 
 - As a user, I would like to be able to sign out of my account when it is not in use.
-- As a user, I would like to be able to sign up to get information tailored to my needs. 
 - As a user, I would like to read my dashboard which displays information in a nice, easy to read layout
 - As a user, I would like to see tips on pregnancy on my dashboard, relative to my needs
 - As an administrative user, I would like to be able to create a blog post to inform my audience on a range of child birth related topics. 
