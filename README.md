@@ -51,7 +51,12 @@ This has been developed utilising the MERN technologies. The stack includes;-
 
 ## Wireframes
 
-### Desktop & Tablet
-![desktop wireframe](docs/Desktop.png)
+### Desktop
+![desktop wireframe](Docs/Wireframes/Desktop.png)
+
+### Tablet/iPad
+![iPad wireframe](Docs/Wireframes/iPad.png)
+
+### Mobile
 
 ## Planning Methodology with Screenshots 
