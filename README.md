@@ -71,3 +71,6 @@ The planning methodology we have implemented is using Trello. We will be delegat
 ![trello-shots-1](https://user-images.githubusercontent.com/8579501/70399064-d88b0100-1a6c-11ea-8288-600c43dbf049.png)
 ![trello-shots-2](https://user-images.githubusercontent.com/8579501/70399065-d88b0100-1a6c-11ea-9c4d-bcc0dfa2f010.png)
 ![trello-shots-3](https://user-images.githubusercontent.com/8579501/70399066-d9239780-1a6c-11ea-9e5b-33a374a78a2d.png)
+
+## Source Control
+We have planned to use Git source control to organise the development of our MERN application. This is due to the synergy with our planning methodology, trello. We are capable of creating feature branches that coincide with job cards on trello making it easier to organise what we have done and are yet to do. 
