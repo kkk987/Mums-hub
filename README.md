@@ -5,9 +5,10 @@ Created By Sherine Mathew, Mark Ying and Jeffrey Dorling
 ### Purpose
 Mums-hub is a website that is designed as an informative blog to help pregnant woman navigate through 
 pregnancy. 
+
 Pregnancy is one of the most exciting as well as daunting period in a woman's life. Optimising health and wellbeing during pregnancy is essential for the woman; her family’s and her infant’s future potential and wellbeing. Unfortunately for a number of women, pregnancy can be a period of stress and lead to significant psychological illness. This website is developed to provide information to women with the emotional and physical support they need to endure this process. 
-Blogs are created by Tracey who has a massive 20+ years of experience working as a midwife. A typical pregnancy lasts 40 weeks from the first day of the last menstrual period (LMP) to the birth of the baby. It is divided into three stages, called trimesters: first trimester, second trimester, and third trimester. The fetus undergoes many changes throughout maturation. Tracey has explained 
-what preganancy is all about in a week to week development stage. She has explained clearly what to expect in a particular week, what is normal during that week and what are the options available to better manage pregnancy. Visitors to this website can read blogs and also allows them to register as a user. Once registered, personalised posts are provided. Users can search through a variety of topics that they are interested in. They can also comment on the post and share their experience or ask a question related to the post.
+
+Blogs are created by Tracey who has a massive 20+ years of experience working as a midwife. A typical pregnancy lasts 40 weeks from the first day of the last menstrual period (LMP) to the birth of the baby. It is divided into three stages, called trimesters: first trimester, second trimester, and third trimester. The fetus undergoes many changes throughout maturation. Tracey has explained what preganancy is all about in a week to week development stage. She has explained clearly what to expect in a particular week, what is normal during that week and what are the options available to better manage pregnancy. Visitors to this website can read blogs and also allows them to register as a user. Once registered, personalised posts are provided. Users can search through a variety of topics that they are interested in. They can also comment on the post and share their experience or ask a question related to the post.
 
 ### Functionality/Features
 #### A Blog
