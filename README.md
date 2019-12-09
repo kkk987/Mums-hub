@@ -32,8 +32,10 @@ This has been developed utilising the MERN technologies. The stack includes;-
 - React
 - NodeJS
 ## Dataflow Diagram
+![Mum_s_hub](https://user-images.githubusercontent.com/8579501/70398940-d8d6cc80-1a6b-11ea-9292-930db99bd066.png)
 
 ## Application Architecture Diagram 
+![Application_architecture_diagram](https://user-images.githubusercontent.com/8579501/70398942-daa09000-1a6b-11ea-9669-020a8ded44c3.png)
 
 ## User Stories
 - As a user, I would like to be able to read a blog post related on child birth topics so I can be more informed on this topic.
@@ -60,3 +62,6 @@ This has been developed utilising the MERN technologies. The stack includes;-
 ### Mobile
 
 ## Planning Methodology with Screenshots 
+![trello-shots-1](https://user-images.githubusercontent.com/8579501/70399064-d88b0100-1a6c-11ea-8288-600c43dbf049.png)
+![trello-shots-2](https://user-images.githubusercontent.com/8579501/70399065-d88b0100-1a6c-11ea-9c4d-bcc0dfa2f010.png)
+![trello-shots-3](https://user-images.githubusercontent.com/8579501/70399066-d9239780-1a6c-11ea-9e5b-33a374a78a2d.png)
