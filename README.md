@@ -43,18 +43,16 @@ This has been developed utilising the MERN technologies. The stack includes;-
 ![Application_architecture_diagram](https://user-images.githubusercontent.com/8579501/70398942-daa09000-1a6b-11ea-9669-020a8ded44c3.png)
 
 ## User Stories
-- As a user, I would like to be able to read a blog post related on child birth topics so I can be more informed on this topic.
-- As a user, I would like to comment on a blog post as I may have questions or take part in community discussion.
-- As a user, I would like to be able to sign up to register an account.  
-- As a user, I would like to be able to sign in to my account to access information tailored to my needs. 
-- As a user, I would like to be able to sign out of my account when it is not in use.
-- As a user, I would like to read my dashboard which displays information in a nice, easy to read layout
-- As a user, I would like to see tips on pregnancy on my dashboard, relative to my needs
-- As an administrative user, I would like to be able to create a blog post to inform my audience on a range of child birth related topics. 
-- As an administrative user, I would like to be able to edit a blog post as a means of fact checking and ensuring the content is of a high quality and always reliable. 
-- As an administrative user, I would like to be able to delete a blog post when a post is deemed irrelevent or unnecessary.
-- As an administrative user, I would like to be able to comment on a blog post, responding to other users comments and questions, furthering discussion. 
-- As an administrative user, I would like to be able to see a list of my blog posts as an easy to access position which helps manage the content I am putting to my audience. 
+- As a user, I can register a new account.  
+- As a user, I can sign in to my account. 
+- As a logged-in user, I can sign out of my account.
+- As a user, I can read a blog related to pregnancy.
+- As a logged-in user, I can comment on a blog.
+- As a logged-in user, I can manage my dashboard
+- As a logged-in user, I can access information tailored to my needs.
+- As an administrative user, I can create a blog. 
+- As an administrative user, I can edit a blog. 
+- As an administrative user, I can delete a blog.
 
 ## Wireframes
 
@@ -66,6 +64,7 @@ This has been developed utilising the MERN technologies. The stack includes;-
 
 ### Mobile
 ![Mobile wireframe](Docs/Wireframes/Mobile.png)
+
 ## Planning Methodology with Screenshots
 The methodology followed in this project is Agile Kanban methodology.
 
