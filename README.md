@@ -45,6 +45,7 @@ This has been developed utilising the MERN technologies. The stack includes;-
 ## User Stories
 - As a user, I can register a new account.  
 - As a user, I can sign in to my account. 
+- As a user, I can accept/decline the disclaimer.
 - As a logged-in user, I can sign out of my account.
 - As a user, I can read a blog related to pregnancy.
 - As a logged-in user, I can comment on a blog.
