@@ -37,7 +37,7 @@ This has been developed utilising the MERN technologies. The stack includes;-
 - NodeJS
 
 ## Dataflow Diagram
-![Mum_s_hub](https://user-images.githubusercontent.com/8579501/70398940-d8d6cc80-1a6b-11ea-9292-930db99bd066.png)
+![Mums_hub](https://user-images.githubusercontent.com/8579501/70584703-af55a680-1c0d-11ea-9a4f-a577156aeba9.png)
 
 ## Application Architecture Diagram 
 ![Application_architecture_diagram](https://user-images.githubusercontent.com/8579501/70398942-daa09000-1a6b-11ea-9669-020a8ded44c3.png)
