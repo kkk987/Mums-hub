@@ -67,10 +67,25 @@ This has been developed utilising the MERN technologies. The stack includes;-
 ### Mobile
 ![Mobile wireframe](Docs/Wireframes/Mobile.png)
 ## Planning Methodology with Screenshots
-The planning methodology we have implemented is using Trello. We will be delegating job cards and following along with what cards are complete and incomplete. This was considered and agreed to, due to the ability of having clear jobs to complete in an easy process. It was also approved by all members due to the action of being able to see exactly the jobs are taking the largest times and being able to solve these larger problems together while quickly finishing the smaller jobs separately.   
+The methodology followed in this project is Agile Kanban methodology.
+
+![b2ap3_large_01](https://user-images.githubusercontent.com/8579501/70580916-1fa9fb00-1c01-11ea-9f04-902297803f33.jpg)
+
+We start the day with daily standup to track our progress and the tasks for the day. If anyone is blocked at any point, we would work together to resolve the problem.  
+
+### Trello
+The tool we used to manage the jobs is trello. We will be delegating job cards and following along with what cards are complete and incomplete. This was considered and agreed to during the first team meeting. It was also approved by all members with a better visualization of the job status(like to-do, in-progress etc.), difficulty, estimated time and job priority.   
+
 ![trello-shots-1](https://user-images.githubusercontent.com/8579501/70399064-d88b0100-1a6c-11ea-8288-600c43dbf049.png)
+
 ![trello-shots-2](https://user-images.githubusercontent.com/8579501/70399065-d88b0100-1a6c-11ea-9c4d-bcc0dfa2f010.png)
+
 ![trello-shots-3](https://user-images.githubusercontent.com/8579501/70399066-d9239780-1a6c-11ea-9e5b-33a374a78a2d.png)
 
-## Source Control
-We have planned to use Git source control to organise the development of our MERN application. This is due to the synergy with our planning methodology, trello. We are capable of creating feature branches that coincide with job cards on trello making it easier to organise what we have done and are yet to do. 
+
+### Source control process
+When we move to development stage, we will use github as our main source control platform. And we are following the featture branch workflow where we will derive feature branches from master branch. After the code is complete in each feature branch, the assigned team member is then required to raise pull requests. At least one other team member also reviews the code, approves it and make appropriate merges to the master branch.
+
+![feature-branch](https://user-images.githubusercontent.com/8579501/70581588-600a7880-1c03-11ea-99f3-30b62c7c4beb.png)
+
+When changes are made, the assigned team member makes appropriate changes on trello cards to update the progress.
