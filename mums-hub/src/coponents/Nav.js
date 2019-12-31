@@ -22,7 +22,7 @@ function navLoggedOut() {
     return (
         <Fragment>
             <Navbar.Container position="start">
-                    <Navbar.Item href="#">Login</Navbar.Item>
+                    <Navbar.Item  data-cy="login" href="#">Login</Navbar.Item>
                     <Navbar.Item href="#">Register</Navbar.Item>
             </Navbar.Container>
             <Navbar.Container position="end">
