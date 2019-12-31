@@ -12,7 +12,7 @@ const Nav = (props) => {
         return (
             <Fragment>
                 <Navbar.Container position="start">
-                    <Navbar.Item href="#">Logout</Navbar.Item>
+                    <NavLink to="/auth/logout" className="navbar-item" onClick={hideMenu}>Logout</NavLink>
                 </Navbar.Container>
                 <Navbar.Container position="end">
                             <Navbar.Item href="#">About</Navbar.Item>

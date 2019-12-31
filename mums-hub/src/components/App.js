@@ -42,7 +42,7 @@ const App = (props) => {
 			data:  null 
 		})
 		setLoggedInUser(null)
-		return <Redirect to="/posts" />
+		return <Redirect to="/#" />
 	}
   // Use reducer hook to handle state items
 	const [loggedInUser, dispatchLoggedInUser] = useReducer(stateReducer, null)

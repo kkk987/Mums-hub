@@ -6,14 +6,14 @@ const RegisterUser = (props) => {
 	function handleRegister(event) {
 		console.log("in handleregister")
 		event.preventDefault()
-		const form = event.target
-		const username = form.elements.username.value
-		const email = form.elements.email.value
-        const password = form.elements.password.value
-        const dueDate = form.elements.dueDate.value
+        const form = event.target
+		const username = form.elements[0].value
+		const email = form.elements[1].value
+        const password = form.elements[2].value
+        const dueDate = form.elements[3].value
 		
 		// TBD: Register user with server and redirect to login.
-		registerUser({username: username, email: email, password: password, dueDate:dueDate})
+		registerUser({username: username, email: email, password: password, dueDate: dueDate})
 		props.history.push("/auth/login")	
 	}
 
@@ -25,8 +25,8 @@ const RegisterUser = (props) => {
 			<input type="email" className="input" name="email" placeholder="Email" required></input>
 			<label className="label">Password</label>
 			<input type="password" className="input" name="password" placeholder="Password" required></input>
-            <label className="label">Due Date</label>
-			<input type="date" className="input" name="duedate" placeholder="Due Date" required></input>
+            <label className="label">Due Date</label> 
+			<input type="date" className="input" name="duedate" placeholder="DueDate" required></input>
 			<input type="submit" value="Register" className="button is-info"></input>
 
 		</form>
