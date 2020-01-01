@@ -23,7 +23,7 @@ describe('Test login', () => {
     cy.get("[data-cy=loginForm]").should('be.visible')
   })
 
-  it('can login', () => {
+  it('Can login', () => {
     cy.get("[data-cy=login]").click()
     cy.get("[data-cy=username]").type(fixtures.registeredUser.username)
     cy.get("[data-cy=password]").type(fixtures.registeredUser.password)

@@ -11,7 +11,9 @@ const Nav = (props) => {
     function navLoggedIn() {
         return (
             <Fragment>
-                <Navbar.Container position="start">
+                <Navbar.Container 
+                    position="start"
+                >
                     <NavLink 
                         to="/auth/logout" 
                         data-cy="logout" 
@@ -66,11 +68,30 @@ const Nav = (props) => {
                     >
                         Login
                     </NavLink>
-                    <NavLink to="/auth/register" data-cy="register" className="navbar-item" onClick={hideMenu}>Register</NavLink>
+                    <NavLink 
+                        to="/auth/register" 
+                        data-cy="register" 
+                        className="navbar-item" 
+                        onClick={hideMenu}
+                    >
+                        Register
+                    </NavLink>
                 </Navbar.Container>
-                <Navbar.Container position="end">
-                    <Navbar.Item data-cy="About" href="#">About</Navbar.Item>
-                    <Navbar.Item data-cy="Blogs" href="#">Blogs</Navbar.Item>
+                <Navbar.Container 
+                    position="end"
+                >
+                    <Navbar.Item 
+                        data-cy="About" 
+                        href="#"
+                    >
+                        About
+                    </Navbar.Item>
+                    <Navbar.Item 
+                        data-cy="Blogs" 
+                        href="#"
+                    >
+                        Blogs
+                    </Navbar.Item>
                 </Navbar.Container>
             </Fragment>
         )
@@ -87,10 +108,23 @@ const Nav = (props) => {
             // active is stored in state, and used to toggle the hamburger menu
             // const { loggedInUser } = this.props
             
-                <Navbar data-cy="navbar" color="info" fixed="top"  active={active}>
-                    <Navbar.Brand data-cy="navbarBrand">
-                        <Navbar.Item renderAs="p">{loggedInUser || "guest"}</Navbar.Item>
-                        <Navbar.Burger onClick={() => {setActive(!active)}} />
+                <Navbar 
+                    data-cy="navbar" 
+                    color="info" 
+                    fixed="top"  
+                    active={active}
+                >
+                    <Navbar.Brand 
+                        data-cy="navbarBrand"
+                    >
+                        <Navbar.Item 
+                            renderAs="p"
+                        >
+                            {loggedInUser || "guest"}
+                        </Navbar.Item>
+                        <Navbar.Burger 
+                            onClick={() => {setActive(!active)}} 
+                        />
                     </Navbar.Brand>
                     <Navbar.Menu>
                         {/* Render the relevant links depending on whether or not a user is logged in  */}
