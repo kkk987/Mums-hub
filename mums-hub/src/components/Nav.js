@@ -11,15 +11,46 @@ const Nav = (props) => {
     function navLoggedIn() {
         return (
             <Fragment>
-                <Navbar.Container position="start">
-                    <NavLink to="/auth/logout" className="navbar-item" onClick={hideMenu}>Logout</NavLink>
+                <Navbar.Container 
+                    position="start"
+                >
+                    <NavLink 
+                        to="/auth/logout" 
+                        data-cy="logout" 
+                        className="navbar-item" 
+                        onClick={hideMenu}
+                    >
+                        Logout
+                    </NavLink>
                 </Navbar.Container>
-                <Navbar.Container position="end">
-                            <Navbar.Item href="/about">About</Navbar.Item>
-                            <Navbar.Item href="#">Blogs</Navbar.Item>
-                            <Navbar.Item href="#">My Profile</Navbar.Item>
-                            <Navbar.Item href="#">Add Blogs</Navbar.Item>
-                            <Navbar.Item href="#">Important Docs</Navbar.Item>
+                <Navbar.Container 
+                    position="end"
+                >
+                    <Navbar.Item 
+                        href="/about"
+                    >
+                        About
+                    </Navbar.Item>
+                    <Navbar.Item 
+                        href="#"
+                    >
+                        Blogs
+                    </Navbar.Item>
+                    <Navbar.Item 
+                        href="#"
+                    >
+                        My Profile
+                    </Navbar.Item>
+                    <Navbar.Item 
+                        href="#"
+                    >
+                        Add Blogs
+                    </Navbar.Item>
+                    <Navbar.Item 
+                        href="#"
+                    >
+                        Important Docs
+                    </Navbar.Item>
                 </Navbar.Container>
             </Fragment>
         )
@@ -29,13 +60,38 @@ const Nav = (props) => {
         return (
             <Fragment>
                 <Navbar.Container position="start">
-                    <NavLink to="/auth/login" className="navbar-item" onClick={hideMenu}>Login</NavLink>
-                    <NavLink to="/auth/register" className="navbar-item" onClick={hideMenu}>Register</NavLink>
+                    <NavLink 
+                        data-cy="login" 
+                        to="/auth/login" 
+                        className="navbar-item" 
+                        onClick={hideMenu}
+                    >
+                        Login
+                    </NavLink>
+                    <NavLink 
+                        to="/auth/register" 
+                        data-cy="register" 
+                        className="navbar-item" 
+                        onClick={hideMenu}
+                    >
+                        Register
+                    </NavLink>
                 </Navbar.Container>
-                <Navbar.Container position="end">
-                    <Navbar.Item href="/about">About</Navbar.Item>
-                    <Navbar.Item href="#">Home</Navbar.Item>
-                    <Navbar.Item href="#">Blogs</Navbar.Item>
+                <Navbar.Container 
+                    position="end"
+                >
+                    <Navbar.Item 
+                        data-cy="About" 
+                        href="/about"
+                    >
+                        About
+                    </Navbar.Item>
+                    <Navbar.Item 
+                        data-cy="Blogs" 
+                        href="#"
+                    >
+                        Blogs
+                    </Navbar.Item>
                 </Navbar.Container>
             </Fragment>
         )
@@ -43,7 +99,7 @@ const Nav = (props) => {
 
 
     // The Nav component renders the nav bar at the top of the page
-    // It is a class component because it requires state to manage the hamburger menu toggle
+    // It is a class component data-cybecause it requires state to manage the hamburger menu toggle
     
         const [active, setActive] = useState(false)
         const {loggedInUser} = props
@@ -52,10 +108,23 @@ const Nav = (props) => {
             // active is stored in state, and used to toggle the hamburger menu
             // const { loggedInUser } = this.props
             
-                <Navbar color="info" fixed="top"  active={active}>
-                    <Navbar.Brand>
-                        <Navbar.Item renderAs="p">{loggedInUser || "guest"}</Navbar.Item>
-                        <Navbar.Burger onClick={() => {setActive(!active)}} />
+                <Navbar 
+                    data-cy="navbar" 
+                    color="info" 
+                    fixed="top"  
+                    active={active}
+                >
+                    <Navbar.Brand 
+                        data-cy="navbarBrand"
+                    >
+                        <Navbar.Item 
+                            renderAs="p"
+                        >
+                            {loggedInUser || "guest"}
+                        </Navbar.Item>
+                        <Navbar.Burger 
+                            onClick={() => {setActive(!active)}} 
+                        />
                     </Navbar.Brand>
                     <Navbar.Menu>
                         {/* Render the relevant links depending on whether or not a user is logged in  */}
