@@ -4,6 +4,7 @@ import stateReducer from "../config/stateReducer"
 import Nav from "./Nav"
 import RegisterUser from "./SignUp"
 import SignIn from "./SignIn"
+import About from "./About"
 import { loginUser, logoutUser } from "../services/authServices"
 
 const App = (props) => {
@@ -70,6 +71,7 @@ const App = (props) => {
 						<Route exact path="/auth/login" render={ (props) => <SignIn {...props} handleLogin={handleLogin}/> }/>
 						<Route exact path="/auth/register" render={ (props) => <RegisterUser {...props} />} />
 						<Route exact path="/auth/logout" render={() => handleLogout()} />
+						<Route exact path="/about" component={About} />
 						
 					</Switch>
 				

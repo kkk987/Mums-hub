@@ -27,7 +27,7 @@ const Nav = (props) => {
                     position="end"
                 >
                     <Navbar.Item 
-                        href="#"
+                        href="/about"
                     >
                         About
                     </Navbar.Item>
@@ -82,7 +82,7 @@ const Nav = (props) => {
                 >
                     <Navbar.Item 
                         data-cy="About" 
-                        href="#"
+                        href="/about"
                     >
                         About
                     </Navbar.Item>
