@@ -15,7 +15,7 @@ const Nav = (props) => {
                     <NavLink to="/auth/logout" className="navbar-item" onClick={hideMenu}>Logout</NavLink>
                 </Navbar.Container>
                 <Navbar.Container position="end">
-                            <Navbar.Item href="#">About</Navbar.Item>
+                            <Navbar.Item href="/about">About</Navbar.Item>
                             <Navbar.Item href="#">Blogs</Navbar.Item>
                             <Navbar.Item href="#">My Profile</Navbar.Item>
                             <Navbar.Item href="#">Add Blogs</Navbar.Item>
@@ -33,6 +33,7 @@ const Nav = (props) => {
                     <NavLink to="/auth/register" className="navbar-item" onClick={hideMenu}>Register</NavLink>
                 </Navbar.Container>
                 <Navbar.Container position="end">
+                    <Navbar.Item href="/about">About</Navbar.Item>
                     <Navbar.Item href="#">Home</Navbar.Item>
                     <Navbar.Item href="#">Blogs</Navbar.Item>
                 </Navbar.Container>
