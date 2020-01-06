@@ -15,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "server": "nodemon app.js",
+    "server": "node ./server/server.js",
     "test": "yarn run cypress open",
     "eject": "react-scripts eject",
     "cy": "CYPRESS_RECORD_KEY=<your-key-here> node_modules/.bin/cypress run --record --browser chrome"
@@ -45,5 +45,6 @@
     "mocha": "^7.0.0",
     "mongoose": "^5.8.4",
     "nodemon": "^2.0.2"
-  }
+  },
+  "proxy": "http://localhost:3001"
 }
