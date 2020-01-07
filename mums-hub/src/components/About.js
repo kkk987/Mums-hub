@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heading, Section } from "react-bulma-components"
+
 const About = () => (
   <Section className="content">
     <Heading>About Mum's Hub</Heading>
