@@ -23,7 +23,7 @@ const App = (props) => {
 
 	// Use reducer hook to handle state items
 	const [store, dispatch] = useReducer(stateReducer,initialState)
-
+	const {loggedInUser} = store
 	// Get loggedInUser from localStorage
 	function getLoggedInUser() {
 		return localStorage.getItem("loggedInUser")
@@ -41,7 +41,7 @@ const App = (props) => {
 		const password = form.elements.password.value
 		// TBD: Authenticate with server. If successful:
 		const result = loginUser({username: username, password: password})
-		dispatchLoggedInUser({
+		dispatch({
 			type: "setLoggedInUser",
 			data: username
 		})
@@ -53,20 +53,18 @@ const App = (props) => {
 	// TODO: call server to log out
 	function handleLogout() {
 		logoutUser(loggedInUser)
-		dispatchLoggedInUser({ 
+		dispatch({ 
 			type: "setLoggedInUser",
 			data:  null 
 		})
 		setLoggedInUser(null)
 		return <Redirect to="/#" />
 	}
-  // Use reducer hook to handle state items
-	const [loggedInUser, dispatchLoggedInUser] = useReducer(stateReducer, null)
-		
+  
 	useEffect(()=> {
        
 		// If we have login information persisted, set the state
-		dispatchLoggedInUser({
+		dispatch({
 			type: "setLoggedInUser",
 			data: getLoggedInUser()
 		})
