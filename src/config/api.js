@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-const deployedServer = process.env.EXPRESS_URI
+console.log("express uri from env", process.env.EXPRESS_URI)
+const deployedServer = "https://sheltered-garden-84149.herokuapp.com/"
 
 // Create an axios instance
 export default axios.create({
