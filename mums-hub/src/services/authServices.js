@@ -1,3 +1,5 @@
+import api from "../config/api"
+
 export function registerUser(userInfo) {
     const {username, email, password} = userInfo
     // call to server to register user
@@ -16,4 +18,32 @@ export function loginUser(userInfo) {
 
 export function logoutUser(username) {
     // call to server to logout user
+    try {
+        return api.get("/auth/logout")
+    }
+    catch (error) {
+        console.log("an error occurred logging out", error)
+        throw(error)
+    }
+}
+
+export async function userAuthenticated() {
+    try {
+        const response =  await api.get("/auth/user")
+        return response
+    }
+    catch(error) {
+        console.log("an error occurred checking for authenticated user")
+        throw(error)
+    }
+}
+
+// Get loggedInUser from localStorage
+export function getLoggedInUser() {
+    return localStorage.getItem("loggedInUser")
+}
+
+// Store loggedInUser username in local storage
+export function setLoggedInUser(user) {
+    user ? localStorage.setItem("loggedInUser", user) : localStorage.removeItem("loggedInUser")
 }
