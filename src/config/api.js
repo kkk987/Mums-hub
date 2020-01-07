@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const deployedServer = ""
+const deployedServer = process.env.EXPRESS_URI
 
 // Create an axios instance
 export default axios.create({
