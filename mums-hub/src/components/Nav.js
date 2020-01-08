@@ -1,9 +1,24 @@
 import React, { Fragment, useState } from "react"
 import { Navbar } from "react-bulma-components"
-import { NavLink } from "react-router-dom"
+import { NavLink, Redirect } from "react-router-dom"
+import { useGlobalState } from "../config/store"
+import { logoutUser, setLoggedInUser } from "../services/authServices"
 
 const Nav = (props) => {
 
+   // handles logout
+	function handleLogout() {
+		logoutUser()
+		dispatch({ 
+			type: "setLoggedInUser",
+			data:  null 
+		})
+        setLoggedInUser(null)
+        hideMenu()
+		return <Redirect to="/posts" />
+	}
+
+    // forces a state change to hide the hamburger menu
     function hideMenu() {
         setActive(false)
     }
@@ -11,127 +26,60 @@ const Nav = (props) => {
     function navLoggedIn() {
         return (
             <Fragment>
-                <Navbar.Container 
-                    position="start"
-                >
-                    <NavLink 
-                        to="/auth/logout" 
-                        data-cy="logout" 
-                        className="navbar-item" 
-                        onClick={hideMenu}
-                    >
-                        Logout
-                    </NavLink>
+            
+                <Navbar.Container position="start">
+                    <NavLink to="#" className="navbar-item" onClick={handleLogout}>Logout</NavLink>
                 </Navbar.Container>
-                <Navbar.Container 
-                    position="end"
-                >
-                    <Navbar.Item 
-                        href="/about"
-                    >
-                        About
-                    </Navbar.Item>
-                    <Navbar.Item 
-                        href="#"
-                    >
-                        Blogs
-                    </Navbar.Item>
-                    <Navbar.Item 
-                        href="#"
-                    >
-                        My Profile
-                    </Navbar.Item>
-                    <Navbar.Item 
-                        href="#"
-                    >
-                        Add Blogs
-                    </Navbar.Item>
-                    <Navbar.Item 
-                        href="#"
-                    >
-                        Important Docs
-                    </Navbar.Item>
+                <Navbar.Container position="end">
+
+                        <NavLink to="/about" className="navbar-item" onClick={hideMenu}>About</NavLink>
+                        <NavLink to="/myProfile" className="navbar-item" onClick={hideMenu}>My Profile</NavLink>
+                        <NavLink to="/blogs" className="navbar-item" onClick={hideMenu}>Blogs</NavLink>
+                        <NavLink to="/posts/new" className="navbar-item" onClick={hideMenu}>Add Post</NavLink>
+                        <NavLink to="/impDocs" className="navbar-item" onClick={hideMenu}>Important Documents</NavLink>
+                        <NavLink to={`/posts?username=${loggedInUser}`} className="navbar-item" onClick={hideMenu}>
+                            My Blog
+                        </NavLink>
+                   
                 </Navbar.Container>
+            
             </Fragment>
         )
     }
-
+    
     function navLoggedOut() {
         return (
             <Fragment>
                 <Navbar.Container position="start">
-                    <NavLink 
-                        data-cy="login" 
-                        to="/auth/login" 
-                        className="navbar-item" 
-                        onClick={hideMenu}
-                    >
-                        Login
-                    </NavLink>
-                    <NavLink 
-                        to="/auth/register" 
-                        data-cy="register" 
-                        className="navbar-item" 
-                        onClick={hideMenu}
-                    >
-                        Register
-                    </NavLink>
+                    <NavLink to="/auth/login" className="navbar-item" onClick={hideMenu}>Login</NavLink>
+                    <NavLink to="/auth/register" className="navbar-item" onClick={hideMenu}>Register</NavLink>
                 </Navbar.Container>
-                <Navbar.Container 
-                    position="end"
-                >
-                    <Navbar.Item 
-                        data-cy="About" 
-                        href="/about"
-                    >
-                        About
-                    </Navbar.Item>
-                    <Navbar.Item 
-                        data-cy="Blogs" 
-                        href="#"
-                    >
-                        Blogs
-                    </Navbar.Item>
+                <Navbar.Container position="end">
+                    <NavLink to="/about" className="navbar-item" onClick={hideMenu}>About</NavLink>
+                    <NavLink to="/blogs" className="navbar-item" onClick={hideMenu}>Blogs</NavLink>
                 </Navbar.Container>
             </Fragment>
         )
     }
-
-
-    // The Nav component renders the nav bar at the top of the page
-    // It is a class component data-cybecause it requires state to manage the hamburger menu toggle
     
-        const [active, setActive] = useState(false)
-        const {loggedInUser} = props
-        console.log(`LoggedInUser: ${loggedInUser}`);
-        return (
-            // active is stored in state, and used to toggle the hamburger menu
-            // const { loggedInUser } = this.props
-            
-                <Navbar 
-                    data-cy="navbar" 
-                    color="info" 
-                    fixed="top"  
-                    active={active}
-                >
-                    <Navbar.Brand 
-                        data-cy="navbarBrand"
-                    >
-                        <Navbar.Item 
-                            renderAs="p"
-                        >
-                            {loggedInUser || "guest"}
-                        </Navbar.Item>
-                        <Navbar.Burger 
-                            onClick={() => {setActive(!active)}} 
-                        />
-                    </Navbar.Brand>
-                    <Navbar.Menu>
-                        {/* Render the relevant links depending on whether or not a user is logged in  */}
-                        {loggedInUser ? navLoggedIn() : navLoggedOut()}
-                    </Navbar.Menu>
-                </Navbar>
-            
-        )
+
+    const [active, setActive] = useState(false)
+    const { store, dispatch } = useGlobalState()
+    const {loggedInUser} = store
+
+    return (
+        // active is stored in state, and used to toggle the hamburger menu  
+        <Navbar color="info" fixed="top"  active={active}>
+            <Navbar.Brand>
+                <Navbar.Item renderAs="p">{loggedInUser || "guest"}</Navbar.Item>
+                <Navbar.Burger onClick={() => {setActive(!active)}} />
+            </Navbar.Brand>
+            <Navbar.Menu>
+                {/* Render the relevant NavLinks depending on whether or not a user is logged in  */}
+                {loggedInUser ? navLoggedIn() : navLoggedOut()}
+            </Navbar.Menu>
+        </Navbar>
+        
+    )
 }
 export default Nav

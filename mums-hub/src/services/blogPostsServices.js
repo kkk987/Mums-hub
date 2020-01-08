@@ -32,7 +32,7 @@ export const getFilteredBlogPosts = (blogPosts, filters) => {
 
 // Adds a new blog post to the database
 export const addBlogPost = async (newPost) => {
-    // call to server to add new post
+    // call to server to add new post   
     // will return the new post    
     try {
         const response = await api.post("/posts", newPost)

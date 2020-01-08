@@ -16,10 +16,9 @@ const BlogPosts = (props) => {
 
 	const { match, location } = props
     const { store } = useGlobalState()
-    console.log("store", store)
+  
     const { blogPosts, loggedInUser } = store 
-    // console.log("Trying to read blogPosts from store : ")
-    // console.log(blogPosts)
+
 	const id = match.params && match.params.id
 	const queryObj = qs.parse(location.search, { ignoreQueryPrefix: true })
 	

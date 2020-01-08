@@ -5,15 +5,16 @@ import { addBlogPost } from "../services/blogPostsServices"
 const BlogPostForm = (props) => {
 
 	const { store, dispatch } = useGlobalState()
-	const { blogPosts } = store
+	const { loggedInUser, blogPosts } = store
 	
 	function addNewBlogPost(event) {
 		event.preventDefault()
 		const form = event.target
 		const post = {
 			title: form.title.value,
-			category: form.category.value,
-			content: form.content.value
+			// category: form.category.value,
+			content: form.content.value,
+			username: loggedInUser
 		}
 		// call to server to add blog post
 		addBlogPost(post).then((response) => {			

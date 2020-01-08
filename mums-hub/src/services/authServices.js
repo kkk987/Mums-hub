@@ -1,22 +1,33 @@
 import api from "../config/api"
 
-export function registerUser(userInfo) {
-    const {username, email, password} = userInfo
+export async function registerUser(userInfo) {
     // call to server to register user
-    return true
-}
-
-export function loginUser(userInfo) {
-    const {username, password} = userInfo
-    // call to server to login user
-    // return user info if successful and error if not
-    return {
-        userInfo: userInfo,
-        error: null
+    try {
+        const response = await api.post("/auth/register", userInfo)
+        console.log("got user back from server", response)
+        return response.data
+    }
+    catch (error) { 
+        console.log("got error", error)
+        throw(error)
     }
 }
 
-export function logoutUser(username) {
+export async function loginUser(userInfo) {
+    // call to server to login user
+    // return user info if successful and error if not
+    try {
+        const response = await api.post("/auth/login", userInfo)
+        console.log("got user back from server", response) 
+        return response.data
+    }
+    catch(error){
+        console.log("got error", error)
+        throw(error)
+    }
+}
+
+export async function logoutUser() {
     // call to server to logout user
     try {
         return api.get("/auth/logout")
