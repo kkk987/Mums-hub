@@ -2,6 +2,7 @@ import React, {Fragment} from "react"
 import {Link} from "react-router-dom"
 import { Button, Section, Heading } from "react-bulma-components"
 import TimeAgo from 'react-timeago'
+import Comments from "./Comments"
 import { useGlobalState } from "../config/store"
 import { removeBlogPost } from "../services/blogPostsServices"
 
@@ -27,9 +28,9 @@ const BlogPost = props => {
     const { blogPost, singlePost} = props
     const { store, dispatch } = useGlobalState()
     const { blogPosts, loggedInUser } = store
-    const { title, username, content, category, _id, modified_date } = blogPost
-    // const showEditDelete = !showAddComment && singlePost
-    const showEditDelete = singlePost
+    const { title, username, content, category, comments, _id, modified_date } = blogPost
+    const showAddComment = username !== loggedInUser
+    const showEditDelete = !showAddComment && singlePost  
 	
 	return (
         <Fragment>
@@ -46,6 +47,12 @@ const BlogPost = props => {
             <Button className="add-margin" color="info" onClick={() => deleteBlogPost(_id)}>Delete</Button>
             </div>
         )}
+            {/* Display comments if we are showing a single blog post */}
+            {singlePost && (
+                <Section className="content" >
+                    <Comments {...props} postId={_id} comments={comments} showAddComment={showAddComment} />						
+                </Section>
+            )}
         </Fragment>
 	)
 }
