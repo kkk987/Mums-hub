@@ -37,9 +37,9 @@ const Nav = (props) => {
                         <NavLink to="/blogs" className="navbar-item" onClick={hideMenu}>Blogs</NavLink>
                         <NavLink to="/posts/new" className="navbar-item" onClick={hideMenu}>Add Post</NavLink>
                         <NavLink to="/impDocs" className="navbar-item" onClick={hideMenu}>Important Documents</NavLink>
-                        <NavLink to={`/posts?username=${loggedInUser}`} className="navbar-item" onClick={hideMenu}>
+                        {/* <NavLink to={`/posts?username=${loggedInUser}`} className="navbar-item" onClick={hideMenu}>
                             My Blog
-                        </NavLink>
+                        </NavLink> */}
                    
                 </Navbar.Container>
             
@@ -57,6 +57,7 @@ const Nav = (props) => {
                 <Navbar.Container position="end">
                     <NavLink to="/about" className="navbar-item" onClick={hideMenu}>About</NavLink>
                     <NavLink to="/blogs" className="navbar-item" onClick={hideMenu}>Blogs</NavLink>
+                    <NavLink to="/impDocs" className="navbar-item" onClick={hideMenu}>Important Documents</NavLink>
                 </Navbar.Container>
             </Fragment>
         )
