@@ -5,6 +5,7 @@ import Nav from "./Nav"
 import RegisterUser from "./SignUp"
 import SignIn from "./SignIn"
 import About from "./About"
+import ImpDocs from "./ImpDocs"
 import BlogPosts from "./BlogPosts"
 import { getAllBlogPosts } from "../services/blogPostsServices"
 import BlogPostForm from "./BlogPostForm"
@@ -119,6 +120,7 @@ const App = (props) => {
 						<Route exact path="/auth/register" render={ (props) => <RegisterUser {...props} />} />
 						<Route exact path="/auth/logout" render={() => handleLogout()} />
 						<Route exact path="/about" component={About} />
+						<Route exact path="/impDocs" component={ImpDocs} />
 						
 					</Switch>
 				
