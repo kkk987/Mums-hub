@@ -2,7 +2,7 @@ import React from 'react';
 import { Heading, Section } from "react-bulma-components"
 
 const About = () => (
-  <Section className="content">
+  <Section data-cy="about-content" className="content">
     <Heading>About Mum's Hub</Heading>
     <p>Mums-hub is a website that is designed as an informative blog to help pregnant woman navigate through pregnancy.</p>
     

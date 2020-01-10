@@ -22,7 +22,7 @@ const EditBlogPostForm = ({match, history}) => {
 		const updatedPost = {
 			_id: post._id,
 			title: form.title.value,
-			category: form.category.value,
+			// category: form.category.value,
 			content: form.content.value
 		}
 

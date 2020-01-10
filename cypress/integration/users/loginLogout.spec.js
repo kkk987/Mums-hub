@@ -28,7 +28,7 @@ describe('Test login', () => {
     cy.get("[data-cy=username]").type(fixtures.registeredUser.username)
     cy.get("[data-cy=password]").type(fixtures.registeredUser.password)
     cy.get("[data-cy=loginButton]").click()
-    cy.url().should("include", "/")
+    cy.url().should("include", "/posts")
   })
 })
 
