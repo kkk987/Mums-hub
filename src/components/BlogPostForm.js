@@ -12,7 +12,7 @@ const BlogPostForm = (props) => {
 		const form = event.target
 		const post = {
 			title: form.title.value,
-			category: form.category.value,
+			// category: form.category.value,
 			content: form.content.value
 		}
 		// call to server to add blog post
