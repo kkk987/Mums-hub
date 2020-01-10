@@ -41,13 +41,17 @@ const App = (props) => {
 		const username = form.elements.username.value
 		const password = form.elements.password.value
 		// TBD: Authenticate with server. If successful:
-		const result = loginUser({username: username, password: password})
-		dispatch({
-			type: "setLoggedInUser",
-			data: username
+		loginUser({username: username, password: password}).then((result) => {
+			dispatch({
+				type: "setLoggedInUser",
+				data: username
+			})
+			setLoggedInUser(username)
+			props.history.push("/posts")
+		}).catch((error) => {
+			console.log("error occurred")
 		})
-		setLoggedInUser(username)
-		props.history.push("/posts")
+		
 	}
 
 	// handles logout
