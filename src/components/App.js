@@ -18,7 +18,7 @@ const App = (props) => {
 
 	// Set initial state
 	const initialState = {
-		loggedInUser: null,
+		loggedInUser: {},
 		blogPosts: []
 	}
 
@@ -32,7 +32,7 @@ const App = (props) => {
 
 	// Store loggedInUser username in local storage
 	function setLoggedInUser(user) {
-		user ? localStorage.setItem("loggedInUser", user) : localStorage.removeItem("loggedInUser")
+		user ? localStorage.setItem("loggedInUser", JSON.stringify(user)) : localStorage.removeItem("loggedInUser")
 	}
 
 	function handleLogin(event, props) {
@@ -41,12 +41,14 @@ const App = (props) => {
 		const username = form.elements.username.value
 		const password = form.elements.password.value
 		// TBD: Authenticate with server. If successful:
-		loginUser({username: username, password: password}).then((result) => {
+		loginUser({username: username, password: password}).then((response) => {
+			console.log("result form login: ",response)
+			const user = response.data
 			dispatch({
 				type: "setLoggedInUser",
-				data: username
+				data: {username: username, role: user.role}
 			})
-			setLoggedInUser(username)
+			setLoggedInUser({username: username, role: user.role})
 			props.history.push("/posts")
 		}).catch((error) => {
 			console.log("error occurred")

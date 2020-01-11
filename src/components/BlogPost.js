@@ -28,9 +28,12 @@ const BlogPost = props => {
     const { blogPost, singlePost} = props
     const { store, dispatch } = useGlobalState()
     const { blogPosts, loggedInUser } = store
-    const { title, username, content, category, comments, _id, modified_date } = blogPost
-    const showAddComment = username !== loggedInUser
-    const showEditDelete = !showAddComment && singlePost  
+    const { role } = JSON.parse(loggedInUser)
+    const { title, username, content, comments, _id, modified_date } = blogPost
+    // console.log("user role:", role)
+    const showAddComment = true
+
+    const showEditDelete = role ? ((role === "admin") && singlePost) : false
 	
 	return (
         <Fragment>

@@ -59,5 +59,5 @@ export function getLoggedInUser() {
 
 // Store loggedInUser username in local storage
 export function setLoggedInUser(user) {
-    user ? localStorage.setItem("loggedInUser", user) : localStorage.removeItem("loggedInUser")
+    user ? localStorage.setItem("loggedInUser", {"username": user.username, "role": user.role}) : localStorage.removeItem("loggedInUser")
 }
