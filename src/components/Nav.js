@@ -28,15 +28,15 @@ const Nav = (props) => {
             <Fragment>
             
                 <Navbar.Container position="start">
-                    <NavLink to="#" className="navbar-item" onClick={handleLogout}>Logout</NavLink>
+                    <NavLink to="#" data-cy="logout" className="navbar-item" onClick={handleLogout}>Logout</NavLink>
                 </Navbar.Container>
                 <Navbar.Container position="end">
 
-                        <NavLink to="/about" className="navbar-item" onClick={hideMenu}>About</NavLink>
-                        <NavLink to="/myProfile" className="navbar-item" onClick={hideMenu}>My Profile</NavLink>
-                        <NavLink to="/blogs" className="navbar-item" onClick={hideMenu}>Blogs</NavLink>
-                        <NavLink to="/posts/new" className="navbar-item" onClick={hideMenu}>Add Post</NavLink>
-                        <NavLink to="/impDocs" className="navbar-item" onClick={hideMenu}>Important Documents</NavLink>
+                        <NavLink to="/about" data-cy="about" className="navbar-item" onClick={hideMenu}>About</NavLink>
+                        <NavLink to="/myProfile" data-cy="my-profile" className="navbar-item" onClick={hideMenu}>My Profile</NavLink>
+                        <NavLink to="/blogs" data-cy="posts" className="navbar-item" onClick={hideMenu}>Blogs</NavLink>
+                        <NavLink to="/posts/new" data-cy="new-post" className="navbar-item" onClick={hideMenu}>Add Post</NavLink>
+                        <NavLink to="/impDocs" data-cy="imp-docs" className="navbar-item" onClick={hideMenu}>Important Documents</NavLink>
                         {/* <NavLink to={`/posts?username=${loggedInUser}`} className="navbar-item" onClick={hideMenu}>
                             My Blog
                         </NavLink> */}
@@ -51,13 +51,13 @@ const Nav = (props) => {
         return (
             <Fragment>
                 <Navbar.Container position="start">
-                    <NavLink to="/auth/login" className="navbar-item" onClick={hideMenu}>Login</NavLink>
-                    <NavLink to="/auth/register" className="navbar-item" onClick={hideMenu}>Register</NavLink>
+                    <NavLink to="/auth/login" data-cy="login" className="navbar-item" onClick={hideMenu}>Login</NavLink>
+                    <NavLink to="/auth/register" data-cy="register" className="navbar-item" onClick={hideMenu}>Register</NavLink>
                 </Navbar.Container>
                 <Navbar.Container position="end">
-                    <NavLink to="/about" className="navbar-item" onClick={hideMenu}>About</NavLink>
-                    <NavLink to="/blogs" className="navbar-item" onClick={hideMenu}>Blogs</NavLink>
-                    <NavLink to="/impDocs" className="navbar-item" onClick={hideMenu}>Important Documents</NavLink>
+                    <NavLink to="/about" data-cy="about" className="navbar-item" onClick={hideMenu}>About</NavLink>
+                    <NavLink to="/blogs" data-cy="posts" className="navbar-item" onClick={hideMenu}>Blogs</NavLink>
+                    <NavLink to="/impDocs" data-cy="imp-docs" className="navbar-item" onClick={hideMenu}>Important Documents</NavLink>
                 </Navbar.Container>
             </Fragment>
         )
@@ -70,10 +70,10 @@ const Nav = (props) => {
 
     return (
         // active is stored in state, and used to toggle the hamburger menu  
-        <Navbar color="info" fixed="top"  active={active}>
-            <Navbar.Brand>
+        <Navbar data-cy="navbar" color="info" fixed="top"  active={active}>
+            <Navbar.Brand data-cy="navbarBrand">
                 <Navbar.Item renderAs="p">{loggedInUser || "guest"}</Navbar.Item>
-                <Navbar.Burger onClick={() => {setActive(!active)}} />
+                <Navbar.Burger data-cy="burger" onClick={() => {setActive(!active)}} />
             </Navbar.Brand>
             <Navbar.Menu>
                 {/* Render the relevant NavLinks depending on whether or not a user is logged in  */}
