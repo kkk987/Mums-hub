@@ -27,7 +27,7 @@ const App = (props) => {
 	const {loggedInUser} = store
 	// Get loggedInUser from localStorage
 	function getLoggedInUser() {
-		return localStorage.getItem("loggedInUser")
+		return JSON.parse(localStorage.getItem("loggedInUser"))
 	}
 
 	// Store loggedInUser username in local storage
