@@ -28,7 +28,7 @@ const BlogPost = props => {
     const { blogPost, singlePost} = props
     const { store, dispatch } = useGlobalState()
     const { blogPosts, loggedInUser } = store
-    const { role } = JSON.parse(loggedInUser)
+    const { role } = loggedInUser ? JSON.parse(loggedInUser) : {role:null}
     const { title, username, content, comments, _id, modified_date } = blogPost
     // console.log("user role:", role)
     const showAddComment = true
