@@ -10,10 +10,11 @@ const RegisterUser = (props) => {
 		const username = form.elements[0].value
 		const email = form.elements[1].value
         const password = form.elements[2].value
-        const dueDate = form.elements[3].value
-		
+		const dueDate = form.elements[3].value
+		const role = "user"
+
 		// TBD: Register user with server and redirect to login.
-		registerUser({username: username, email: email, password: password, dueDate: dueDate})
+		registerUser({username: username, email: email, password: password, dueDate: dueDate, role: role})
 		props.history.push("/auth/login")	
 	}
 
