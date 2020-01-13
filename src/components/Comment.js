@@ -18,10 +18,8 @@ const Comment = props => {
 		const updatedComment = {
 			_id: comment._id,
 			comment: form.comment.value }
-		
-        
         if(updatedComment) {      
-            // call to server to add blog post
+            // call to server to edit comments
                 editCommentToPost(postId, updatedComment).then((response) => {			
                 const updatedPost = response
                 
@@ -33,10 +31,27 @@ const Comment = props => {
                 setEditComment(false)
                 history.push(`/posts/${postId}`)
             }).catch((error) => {				
-                console.log(`An error occurred updating the post with id ${postId}: ${error}`)
+                console.log(`An error occurred updating the comments with id ${comment._id}: ${error}`)
             })
         }
-        
+	}
+	
+	function deleteComment() {
+		// Delete the comment on the server
+		removeCommentsFromPost(comment._id).then(() => {
+			console.log("Blog posts: ", blogPosts)
+			let post = blogPosts.filter((post) => post._id === postId)[0]
+			const comments = post.comments.filter((review) => review.id !== comment._id)
+			post.comments = comments
+			// Update the state
+			dispatch({
+				type: "setBlogPosts",
+				data: updatePostInBlogPostsArray(blogPosts, post)
+			})
+			history.push(`/posts/${postId}`)
+		}).catch((error) => {
+			console.log(`An error occurred deleting the comment: ${error}`)
+		})		
     }
 
 	return (
@@ -45,7 +60,7 @@ const Comment = props => {
 			<p>{username}</p>
 			<p>{comment.comment}</p>
 			{showEditDelete && (<Button notification="true" color="info" onClick={() => {setEditComment(true)}}>Edit</Button>)}
-			{showEditDelete && (<Button notification="true" color="info" onClick={() => {}}>Delete</Button>)}
+			{showEditDelete && (<Button notification="true" color="info" onClick={() => {deleteComment(comment._id)}}>Delete</Button>)}
 		</div>
 		{editComment && 
             <form onSubmit={changeComment}>
