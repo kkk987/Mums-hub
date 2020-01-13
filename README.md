@@ -58,7 +58,7 @@ This has been developed utilizing the MERN technologies. The stack includes -
 
 ## Dataflow Diagram
 
-![Dataflow Diagram](Docs/DataflowDiagram.png)
+![DateflowDiagram](https://user-images.githubusercontent.com/8579501/72252745-a52f2980-364b-11ea-8a81-42d4e7520b86.png)
 
 The above image shows the dataflow diagram before the development. There are some differences between the plan and the actual implementation which include:
 
@@ -76,7 +76,7 @@ The above image shows the dataflow diagram before the development. There are som
 
 ## Application Architecture Diagram 
 
-![Application Architecture Diagram](Docs/ApplicationArchitectureDiagram.png)
+![ApplicationArchitectureDiagram](https://user-images.githubusercontent.com/8579501/72252753-a8c2b080-364b-11ea-8aeb-bd08120541cf.png)
 
 The above image shows the designed application architecture.
 The actual implementation follows the design exactly that admin users and normal users can only interact with the react app. And the react app will send requests to back-end to access required data in mongoose.
@@ -85,9 +85,21 @@ The actual implementation follows the design exactly that admin users and normal
 
 The tool we used to manage the jobs is trello. We will be delegating job cards and following along with what cards are complete and incomplete. This was considered and agreed to during the first team meeting. It was also approved to all members with a better visualization of the job status(like to-do, in-progress etc.), difficulty, estimated time and job priority.
 
-![Screenshot1]()
-![Screenshot12]()
-![Screenshot13]()
+#### Trello boards
+![Screenshot_20200113_215259](https://user-images.githubusercontent.com/8579501/72254441-ca259b80-364f-11ea-85de-3ed6e73aa202.png)
+![Screenshot_20200113_215400](https://user-images.githubusercontent.com/8579501/72254443-cabe3200-364f-11ea-823e-6e494430e66a.png)
+![Screenshot_20200113_215514](https://user-images.githubusercontent.com/8579501/72254444-cabe3200-364f-11ea-997c-c1f5e561e6aa.png)
+![Screenshot_20200113_215524](https://user-images.githubusercontent.com/8579501/72254446-cabe3200-364f-11ea-835d-8d18b0ee52d3.png)
+![Screenshot_20200113_215534](https://user-images.githubusercontent.com/8579501/72254447-cb56c880-364f-11ea-80aa-f28138ce6d8a.png)
+![Screenshot_20200113_215544](https://user-images.githubusercontent.com/8579501/72254448-cb56c880-364f-11ea-9311-9eeeb81359ee.png)
+![Screenshot_20200113_215553](https://user-images.githubusercontent.com/8579501/72254449-cb56c880-364f-11ea-9408-b3e3c556e54b.png)
+![Screenshot_20200113_215611](https://user-images.githubusercontent.com/8579501/72254450-cbef5f00-364f-11ea-8981-f6da77612c33.png)
+![Screenshot_20200113_215619](https://user-images.githubusercontent.com/8579501/72254451-cbef5f00-364f-11ea-9e2b-c068533a3c1c.png)
+
+#### Slack
+![Screenshot_20200113_215714](https://user-images.githubusercontent.com/8579501/72254452-cbef5f00-364f-11ea-8d7a-a97ff946af9e.png)
+![Screenshot_20200113_215734](https://user-images.githubusercontent.com/8579501/72254454-cc87f580-364f-11ea-87bf-e8860fe6acdb.png)
+![Screenshot_20200113_215743](https://user-images.githubusercontent.com/8579501/72254455-cc87f580-364f-11ea-9fa5-6dd15a59f2e1.png)
 
 ## User Stories
 
