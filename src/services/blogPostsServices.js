@@ -85,3 +85,24 @@ export const addCommentToPost = async (postId, comment) => {
         throw(error)
     }
 }
+
+export const editCommentToPost = async (postId, comment) => {
+    try {
+        const response = await api.put(`/posts/comments/${postId}`, comment)
+        return response.data
+    }
+    catch(error) {
+        console.log("Error editing comment:", error)
+        throw(error)
+    }
+}
+
+export const removeCommentsFromPost = async (id) => {
+    try {
+        await api.delete(`/posts/comments/${id}`)
+    }
+    catch(error) {
+        console.log("Error deleting comments:", error)
+        throw(error)
+    }
+}
