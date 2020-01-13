@@ -72,7 +72,7 @@ const Nav = (props) => {
         // active is stored in state, and used to toggle the hamburger menu  
         <Navbar data-cy="navbar" color="info" fixed="top"  active={active}>
             <Navbar.Brand data-cy="navbarBrand">
-                <Navbar.Item renderAs="p">{loggedInUser || "guest"}</Navbar.Item>
+                <Navbar.Item renderAs="p">{loggedInUser ? loggedInUser.username : "guest"}</Navbar.Item>
                 <Navbar.Burger data-cy="burger" onClick={() => {setActive(!active)}} />
             </Navbar.Brand>
             <Navbar.Menu>
