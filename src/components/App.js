@@ -15,7 +15,7 @@ import {StateContext} from "../config/store"
 
 
 const App = (props) => {
-
+	
 	// Set initial state
 	const initialState = {
 		loggedInUser: {},
@@ -115,7 +115,6 @@ const App = (props) => {
 			<StateContext.Provider value={{store,dispatch}} >			
 				<BrowserRouter>
 					<Nav loggedInUser={loggedInUser}/>
-					{/* <Title /> */}
 					<Switch>
 						<Route exact path="/blogs" render ={ () => <Redirect to="/posts" />} />
 						<Route exact path="/posts/new" component={BlogPostForm} />} />
