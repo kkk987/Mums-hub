@@ -53,7 +53,7 @@ const BlogPost = props => {
             {/* Display comments if we are showing a single blog post */}
             {singlePost && (
                 <Section className="content" >
-                    <Comments {...props} postId={_id} comments={comments} showAddComment={showAddComment} />						
+                    <Comments {...props} postId={_id} comments={comments} showAddComment={showAddComment} showEditDelete={showEditDelete} />						
                 </Section>
             )}
         </Fragment>

@@ -22,19 +22,18 @@ const BlogPosts = (props) => {
     // console.log(blogPosts)
 	const id = match.params && match.params.id
 	const queryObj = qs.parse(location.search, { ignoreQueryPrefix: true })
-	
-	// Unless we are retrieving a single post, posts is all blogPosts (retrieved in App)
 	let posts = blogPosts
-	// If we have a post id, we only want to display the single post
+	
+
 	if(id) {
+		// If we have a post id, we only want to display the single post
 		posts = getBlogPost(blogPosts, id)
 	}
-
-	// If we have a query string, filter the blogPosts
 	if(haveQueryParameters(queryObj)) {
+		// If we have a query string, filter the blogPosts
 		posts = getFilteredBlogPosts(posts, queryObj)
-	}
-	
+	} 
+		
 	return (
 		<div>
 		{posts.map(post => (

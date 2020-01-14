@@ -31,7 +31,7 @@ const Comments = props => {
         
     }
 
-    const { comments, showAddComment, postId, history} = props
+    const { comments, showAddComment, postId, history, showEditDelete} = props
     const [addingComment, setAddingComment] = useState(false)
     const {store, dispatch} = useGlobalState()
     const {blogPosts} = store
@@ -50,7 +50,7 @@ const Comments = props => {
                 </form>
             }
             {comments.map(comment => (
-               <Comment key={comment._id} comment={comment} />                                    
+               <Comment key={comment._id} comment={comment} showEditDelete={showEditDelete} postId={postId} history={history}/>                                    
             ))}        
 		</div>
 	)
