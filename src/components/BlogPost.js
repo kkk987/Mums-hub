@@ -19,7 +19,6 @@ const BlogPost = props => {
 			})
 			// Redirect to my blog
             props.history.push(`/posts`)
-            console.log("props history", props.history)
 		}).catch((error) => {
 			console.log(`An error occurred deleting the post: ${error}`)
 		})		
@@ -29,7 +28,7 @@ const BlogPost = props => {
     const { store, dispatch } = useGlobalState()
     const { blogPosts, loggedInUser } = store
     const role  = loggedInUser ? loggedInUser.role : null
-    const { title, username, content, comments, _id, modified_date } = blogPost
+    const { title, content, comments, _id, modified_date } = blogPost
     // console.log("user role:", role)
     const showAddComment = true
 

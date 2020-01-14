@@ -42,7 +42,6 @@ const App = (props) => {
 		const password = form.elements.password.value
 		// TBD: Authenticate with server. If successful:
 		loginUser({username: username, password: password}).then((response) => {
-			console.log("result form login: ",response)
 			const user = response.data
 			dispatch({
 				type: "setLoggedInUser",
@@ -80,7 +79,6 @@ const App = (props) => {
 		function fetchBlogPosts() {
 			getAllBlogPosts().then((response) => {
 				const allPosts = response
-				console.log("all posts from server:", allPosts)
 				dispatch ({
 					type: "setBlogPosts",
 					data: allPosts
