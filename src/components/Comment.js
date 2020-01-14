@@ -41,7 +41,7 @@ const Comment = props => {
 		removeCommentsFromPost(comment._id).then(() => {
 			console.log("Blog posts: ", blogPosts)
 			let post = blogPosts.filter((post) => post._id === postId)[0]
-			const comments = post.comments.filter((review) => review.id !== comment._id)
+			const comments = post.comments.filter((review) => review._id !== comment._id)
 			post.comments = comments
 			// Update the state
 			dispatch({
