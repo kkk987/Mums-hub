@@ -35,7 +35,9 @@ const Nav = (props) => {
                         <NavLink to="/about" data-cy="about" className="navbar-item" onClick={hideMenu}>About</NavLink>
                         <NavLink to="/myProfile" data-cy="my-profile" className="navbar-item" onClick={hideMenu}>My Profile</NavLink>
                         <NavLink to="/blogs" data-cy="posts" className="navbar-item" onClick={hideMenu}>Blogs</NavLink>
-                        <NavLink to="/posts/new" data-cy="new-post" className="navbar-item" onClick={hideMenu}>Add Post</NavLink>
+                        {(loggedInUser.role === "admin") &&
+                            <NavLink to="/posts/new" data-cy="new-post" className="navbar-item" onClick={hideMenu}>Add Post</NavLink>
+                        }
                         <NavLink to="/impDocs" data-cy="imp-docs" className="navbar-item" onClick={hideMenu}>Important Documents</NavLink>
                         {/* <NavLink to={`/posts?username=${loggedInUser}`} className="navbar-item" onClick={hideMenu}>
                             My Blog
