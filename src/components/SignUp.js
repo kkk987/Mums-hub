@@ -4,7 +4,6 @@ import {registerUser} from "../services/authServices"
 const RegisterUser = (props) => {
 
 	function handleRegister(event) {
-		console.log("in handleregister")
 		event.preventDefault()
 		const form = event.target
 		const username = form.elements[0].value

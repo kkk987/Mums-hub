@@ -1,7 +1,6 @@
 import api from "../config/api"
 
 export function registerUser(userInfo) {
-    const {username, email, password} = userInfo
     // call to server to register user
     try {
         return api.post("/auth/register", userInfo)
@@ -10,7 +9,6 @@ export function registerUser(userInfo) {
         console.log("An error occurred calling api in registerUser")
         throw(error)
     }
-    return true
 }
 
 export function loginUser(userInfo) {
