@@ -28,18 +28,16 @@ const Nav = (props) => {
             <Fragment>
             
                 <Navbar.Container position="start">
-                    <NavLink to="#" data-cy="logout" className="navbar-item" onClick={handleLogout}>Logout</NavLink>
+                    <NavLink to="/" className="navbar-item" onClick={hideMenu}>MUM's HUB</NavLink>
                 </Navbar.Container>
+                    
                 <Navbar.Container position="end">
-
                         <NavLink to="/about" data-cy="about" className="navbar-item" onClick={hideMenu}>About</NavLink>
                         <NavLink to="/myProfile" data-cy="my-profile" className="navbar-item" onClick={hideMenu}>My Profile</NavLink>
                         <NavLink to="/blogs" data-cy="posts" className="navbar-item" onClick={hideMenu}>Blogs</NavLink>
                         <NavLink to="/posts/new" data-cy="new-post" className="navbar-item" onClick={hideMenu}>Add Post</NavLink>
-                        <NavLink to="/impDocs" data-cy="imp-docs" className="navbar-item" onClick={hideMenu}>Important Documents</NavLink>
-                        {/* <NavLink to={`/posts?username=${loggedInUser}`} className="navbar-item" onClick={hideMenu}>
-                            My Blog
-                        </NavLink> */}
+                        <NavLink to="/impDocs" data-cy="imp-docs" className="navbar-item" onClick={hideMenu}>Disclaimer</NavLink>
+                        <NavLink to="#" data-cy="logout" className="navbar-item" onClick={handleLogout}>Logout</NavLink>
                    
                 </Navbar.Container>
             
@@ -50,14 +48,16 @@ const Nav = (props) => {
     function navLoggedOut() {
         return (
             <Fragment>
+                
                 <Navbar.Container position="start">
                     <NavLink to="/auth/login" data-cy="login" className="navbar-item" onClick={hideMenu}>Login</NavLink>
                     <NavLink to="/auth/register" data-cy="register" className="navbar-item" onClick={hideMenu}>Register</NavLink>
-                </Navbar.Container>
+                </Navbar.Container>         
+                       
                 <Navbar.Container position="end">
                     <NavLink to="/about" data-cy="about" className="navbar-item" onClick={hideMenu}>About</NavLink>
                     <NavLink to="/blogs" data-cy="posts" className="navbar-item" onClick={hideMenu}>Blogs</NavLink>
-                    <NavLink to="/impDocs" data-cy="imp-docs" className="navbar-item" onClick={hideMenu}>Important Documents</NavLink>
+                    <NavLink to="/impDocs" data-cy="imp-docs" className="navbar-item" onClick={hideMenu}>Disclaimer</NavLink>
                 </Navbar.Container>
             </Fragment>
         )
@@ -70,7 +70,7 @@ const Nav = (props) => {
 
     return (
         // active is stored in state, and used to toggle the hamburger menu  
-        <Navbar data-cy="navbar" color="info" fixed="top"  active={active}>
+        <Navbar data-cy="navbar" color="danger" fixed="top" active={active}>
             <Navbar.Brand data-cy="navbarBrand">
                 <Navbar.Item renderAs="p">{loggedInUser ? loggedInUser.username : "guest"}</Navbar.Item>
                 <Navbar.Burger data-cy="burger" onClick={() => {setActive(!active)}} />

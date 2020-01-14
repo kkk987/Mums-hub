@@ -12,7 +12,8 @@ import BlogPostForm from "./BlogPostForm"
 import EditBlogPostForm from "./EditBlogPostForm"
 import { userAuthenticated, loginUser, logoutUser } from "../services/authServices"
 import {StateContext} from "../config/store"
-
+import Home from "./Home"
+import Profile from "./Profile"
 
 const App = (props) => {
 
@@ -65,7 +66,7 @@ const App = (props) => {
 			data:  null 
 		})
 		setLoggedInUser(null)
-		return <Redirect to="/#" />
+		return <Redirect to="/posts" />
 	}
   
 	useEffect(()=> {
@@ -110,13 +111,15 @@ const App = (props) => {
 	}, [])
 
 	return (
-		
+
 			<div className="container">	
+			
 			<StateContext.Provider value={{store,dispatch}} >			
 				<BrowserRouter>
 					<Nav loggedInUser={loggedInUser}/>
-					{/* <Title /> */}
+					
 					<Switch>
+						<Route exact path="/" component={Home} />
 						<Route exact path="/blogs" render ={ () => <Redirect to="/posts" />} />
 						<Route exact path="/posts/new" component={BlogPostForm} />} />
 						<Route exact path="/posts/edit/:id" component={EditBlogPostForm} />} />
@@ -127,6 +130,7 @@ const App = (props) => {
 						<Route exact path="/auth/logout" render={() => handleLogout()} />
 						<Route exact path="/about" component={About} />
 						<Route exact path="/impDocs" component={ImpDocs} />
+						<Route exact path="/myProfile" component={Profile} />
 						
 					</Switch>
 				
