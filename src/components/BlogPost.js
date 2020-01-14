@@ -18,7 +18,7 @@ const BlogPost = props => {
 				data: posts
 			})
 			// Redirect to my blog
-            props.history.push(`/posts/?username=${loggedInUser}`)
+            props.history.push(`/posts`)
             console.log("props history", props.history)
 		}).catch((error) => {
 			console.log(`An error occurred deleting the post: ${error}`)

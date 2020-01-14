@@ -47,7 +47,7 @@ const Comment = props => {
 				type: "setBlogPosts",
 				data: updatePostInBlogPostsArray(blogPosts, post)
 			})
-			history.push("/posts")
+			history.push(`/posts/${postId}`)
 		}).catch((error) => {
 			console.log(`An error occurred deleting the comment: ${error}`)
 		})		
