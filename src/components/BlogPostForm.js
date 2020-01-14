@@ -32,7 +32,7 @@ const BlogPostForm = (props) => {
 
 
     return (
-		<form onSubmit={addNewBlogPost}>
+		<form onSubmit={addNewBlogPost} data-cy="new-post-form">
 			<label className="label">Title</label>
 			<input type="text" className="input" name="title" placeholder="Title" required></input>
 			<label className="label">Content</label>

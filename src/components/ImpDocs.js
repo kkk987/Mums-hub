@@ -2,7 +2,7 @@ import React from 'react';
 import { Heading, Section } from "react-bulma-components"
 
 const ImpDocs = () => (
-  <Section className="content">
+  <Section className="content" data-cy="disclaim">
     <Heading className="has-text-centered">Disclaimer</Heading>
     <p className="has-text-justified">Mums-hub is a website that is designed for informative purpose only.</p>
     
