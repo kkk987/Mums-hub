@@ -1,13 +1,14 @@
 # Mums-hub
 Created By Sherine Mary Mathew, Mark Ying and Jeffrey Dorling.
 
-- Deployed website - 
-    Backend - https://sheltered-garden-84149.herokuapp.com/
-    Front End - http://floating-badlands-48821.herokuapp.com/
+### Deployed website 
+- [Front End](http://floating-badlands-48821.herokuapp.com/)
+- [Backend](https://sheltered-garden-84149.herokuapp.com/)
 
-- Github repository - [Client repository]( https://github.com/kkk987/Mums-hub )
-                    - [Server repository]( https://github.com/kkk987/mums-hub-server)
-                    - [Document repository] https://github.com/kkk987/mums-hub-doc
+### Github repository :
+- [Client repository]( https://github.com/kkk987/Mums-hub )                    
+- [Server repository]( https://github.com/kkk987/mums-hub-server)
+- [Document repository](https://github.com/kkk987/mums-hub-doc)
 
 ## Description 
 ### Purpose
@@ -53,8 +54,10 @@ This has been developed utilizing the MERN technologies. The stack includes -
 - NodeJS
 - SCSS (Including Bulma for some styling)
 - Heroku for deployment.
-- Git/Github for source control.
-- Cypress for testing.
+- Git/Github for source control
+- Cypress for testing
+- Passport
+- Atlas
 
 ## Dataflow Diagram
 
@@ -117,39 +120,53 @@ The tool we used to manage the jobs is trello. We will be delegating job cards a
 
 ## Wireframes
 
+
+
 Please find below some of the screenshots of the website that will be delivered to the client.
 
 About page - This pages gives an overview/description of the Mums-Hub website. 
 
-![About page](WebsiteScreenshots/About.png)
+![Screenshot_20200115_105549](https://user-images.githubusercontent.com/8579501/72395753-3a363d80-3786-11ea-8719-b297bfe32d30.png)
+![Screenshot_20200115_105811](https://user-images.githubusercontent.com/8579501/72395761-3b676a80-3786-11ea-856e-bd9c5baa8d9b.png)
+![Screenshot_20200115_105843](https://user-images.githubusercontent.com/8579501/72395763-3b676a80-3786-11ea-98f9-4bbd566226b0.png)
+![Screenshot_20200115_105835](https://user-images.githubusercontent.com/8579501/72395762-3b676a80-3786-11ea-829e-9ed40293d651.png)
 
 The disclaimer - This page describes the disclaimer that the website is not to be followed as a medical advice and it is just informative.
 
-![Disclaimer](WebsiteScreenshots/Docs/Disclaimer.png)
+![Screenshot_20200115_105622](https://user-images.githubusercontent.com/8579501/72395755-3a363d80-3786-11ea-8d99-fb4e5a64d989.png)
+![Screenshot_20200115_105926](https://user-images.githubusercontent.com/8579501/72395768-3c989780-3786-11ea-940b-5c3e54fe3062.png)
 
 Blog Posts page - This page displays all the posts that are written by Tracy Dorling.
 
-![Blog Posts page](WebsiteScreenshots/Docs/BlogPosts.png)
+![Screenshot_20200115_105609](https://user-images.githubusercontent.com/8579501/72395754-3a363d80-3786-11ea-95e6-456cc48f244c.png)
+![Screenshot_20200115_105713](https://user-images.githubusercontent.com/8579501/72395759-3aced400-3786-11ea-84d4-7cc3d4df2925.png)
+![Screenshot_20200115_105904](https://user-images.githubusercontent.com/8579501/72395767-3c000100-3786-11ea-8855-031e7e00e77e.png)
 
 RegisterUser - This page displays a form where the user can register to the website with a username, password, email address and the due date. 
 
-![RegisterUser](WebsiteScreenshots/Docs/RegisterUser.png)
+![Screenshot_20200115_105646](https://user-images.githubusercontent.com/8579501/72395758-3aced400-3786-11ea-8806-a2308ffeeea6.png)
 
 Login Page - This page asks for the login information.
 
-![Login](WebsiteScreenshots/Docs/Login.png)
+![Screenshot_20200115_105636](https://user-images.githubusercontent.com/8579501/72395757-3aced400-3786-11ea-9313-f9e04f81e441.png)
 
 Add a post page - This page is used to add a post. This functionality is available only to the admin. The admin can add a post mentioning the title and the content.
 
-![Add a post](WebsiteScreenshots/Docs/AddPost.png)
+![Screenshot_20200115_105943](https://user-images.githubusercontent.com/8579501/72395769-3c989780-3786-11ea-9e72-1b00763afd4a.png)
 
 Displays the post added with Edit and Delete buttons - Once the post is added, the Edit and Delete buttons are available for the admin to make appropriate changes to the post.
 
-![Post Added](WebsiteScreenshots/Docs/PostAdded.png)
+![Screenshot_20200115_105723](https://user-images.githubusercontent.com/8579501/72395760-3aced400-3786-11ea-9b53-87d3447c2c94.png)
 
 Displays the form to update a particular post - This page is for updating a post. This is available only to the admin.
 
-![Update a post](WebsiteScreenshots/Docs/UpdatePost.png)
+![Screenshot_20200115_110548](https://user-images.githubusercontent.com/8579501/72395997-03acf280-3787-11ea-89e3-6d74c18d421c.png)
+
+Displays the comments part - this page is for display a comment and edit/delete a comment. This is available only to the admin at this stage.
+
+![Screenshot_20200115_110932](https://user-images.githubusercontent.com/8579501/72396185-95b4fb00-3787-11ea-9eec-d8b13a5e1cba.png)
+![Screenshot_20200115_110949](https://user-images.githubusercontent.com/8579501/72396186-964d9180-3787-11ea-86e1-b20bca84c693.png)
+
 
 ## Planning Methodology with Screenshots
 
@@ -184,6 +201,27 @@ The tool we used to manage the jobs is trello. We will be delegating job cards a
 
 When we move to development stage, we will use github as our main source control platform. And we are following the feature branch workflow where we will derive feature branches from master branch. After the code is complete in each feature branch, the assigned team member is then required to raise pull requests. At least one other team member also reviews the code, approves it and make appropriate merges to the master branch.
 
-![Feature Branch Workflow](Docs/FeatureBranchWorkflow.png)
-
 When changes are made, the assigned team member makes appropriate changes on trello cards to update the progress.
+
+### Testing
+
+#### User testing
+
+![user-testing](https://user-images.githubusercontent.com/8579501/72394874-74eaa680-3783-11ea-9a02-7af05af8d48b.png)
+
+#### Unit and integration testings
+cypress link:   
+https://dashboard.cypress.io/projects/rhx85n/runs/1/specs
+
+- User   
+https://youtu.be/g9RSfnXE8uw   
+https://youtu.be/Inl_BwsEGAU   
+
+- About page   
+https://youtu.be/4S3nI48to1g
+
+- Disclaim   
+https://youtu.be/CTJE9AhsVdI
+
+- Posts   
+https://youtu.be/DdXsm5JOpcA
