@@ -121,35 +121,35 @@ Please find below some of the screenshots of the website that will be delivered 
 
 About page - This pages gives an overview/description of the Mums-Hub website. 
 
-![About page](WebsiteScreenshots/About.png)
+![About page](Docs/WebsiteScreenshots/About.png)
 
 The disclaimer - This page describes the disclaimer that the website is not to be followed as a medical advice and it is just informative.
 
-![Disclaimer](WebsiteScreenshots/Docs/Disclaimer.png)
+![Disclaimer](/Docs/WebsiteScreenshots/Disclaimer.png)
 
 Blog Posts page - This page displays all the posts that are written by Tracy Dorling.
 
-![Blog Posts page](WebsiteScreenshots/Docs/BlogPosts.png)
+![Blog Posts page](/Docs/WebsiteScreenshots/BlogPosts.png)
 
 RegisterUser - This page displays a form where the user can register to the website with a username, password, email address and the due date. 
 
-![RegisterUser](WebsiteScreenshots/Docs/RegisterUser.png)
+![RegisterUser](Docs/WebsiteScreenshots/RegisterUser.png)
 
 Login Page - This page asks for the login information.
 
-![Login](WebsiteScreenshots/Docs/Login.png)
+![Login](Docs/WebsiteScreenshots/Login.png)
 
 Add a post page - This page is used to add a post. This functionality is available only to the admin. The admin can add a post mentioning the title and the content.
 
-![Add a post](WebsiteScreenshots/Docs/AddPost.png)
+![Add a post](Docs/WebsiteScreenshots/AddPost.png)
 
 Displays the post added with Edit and Delete buttons - Once the post is added, the Edit and Delete buttons are available for the admin to make appropriate changes to the post.
 
-![Post Added](WebsiteScreenshots/Docs/PostAdded.png)
+![Post Added](Docs/WebsiteScreenshots/PostAdded.png)
 
 Displays the form to update a particular post - This page is for updating a post. This is available only to the admin.
 
-![Update a post](WebsiteScreenshots/Docs/UpdatePost.png)
+![Update a post](Docs/WebsiteScreenshots/UpdatePost.png)
 
 ## Planning Methodology with Screenshots
 
@@ -184,6 +184,27 @@ The tool we used to manage the jobs is trello. We will be delegating job cards a
 
 When we move to development stage, we will use github as our main source control platform. And we are following the feature branch workflow where we will derive feature branches from master branch. After the code is complete in each feature branch, the assigned team member is then required to raise pull requests. At least one other team member also reviews the code, approves it and make appropriate merges to the master branch.
 
-![Feature Branch Workflow](Docs/FeatureBranchWorkflow.png)
-
 When changes are made, the assigned team member makes appropriate changes on trello cards to update the progress.
+
+### Testing
+
+#### User testing
+
+![user-testing](https://user-images.githubusercontent.com/8579501/72394874-74eaa680-3783-11ea-9a02-7af05af8d48b.png)
+
+#### Unit testings
+cypress link:   
+https://dashboard.cypress.io/projects/rhx85n/runs/1/specs
+
+- User   
+https://youtu.be/g9RSfnXE8uw   
+https://youtu.be/Inl_BwsEGAU   
+
+- About page   
+https://youtu.be/4S3nI48to1g
+
+- Disclaim   
+https://youtu.be/CTJE9AhsVdI
+
+- Posts   
+https://youtu.be/DdXsm5JOpcA
