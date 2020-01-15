@@ -34,7 +34,7 @@ const BlogPosts = (props) => {
 	} 
 		
 	return (
-		<div>
+		<div data-cy="posts-content">
 		{posts.map(post => (
 			<BlogPost  {...props} key={post._id} blogPost={post} singlePost={haveSinglePost(posts)} loggedInUser={loggedInUser} />								
 		))}

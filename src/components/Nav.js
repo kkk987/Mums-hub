@@ -28,7 +28,7 @@ const Nav = (props) => {
             <Fragment>
             
                 <Navbar.Container position="start">
-                    <NavLink to="/" className="navbar-item" onClick={hideMenu}>MUM's HUB</NavLink>
+                    <NavLink to="/" className="navbar-item" data-cy="homepage" onClick={hideMenu}>MUM's HUB</NavLink>
                 </Navbar.Container>
                     
                 <Navbar.Container position="end">

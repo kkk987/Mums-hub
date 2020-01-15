@@ -20,7 +20,7 @@
     "server": "node ./server/server.js",
     "test": "yarn run cypress open",
     "eject": "react-scripts eject",
-    "cy": "CYPRESS_RECORD_KEY= 4350ad7f-cd0a-4cd5-84d7-e2f0a7692aba node_modules/.bin/cypress run --record --browser chrome"
+    "cy": "CYPRESS_RECORD_KEY=4350ad7f-cd0a-4cd5-84d7-e2f0a7692aba node_modules/.bin/cypress run --record --browser chrome"
   },
   "eslintConfig": {
     "extends": "react-app"

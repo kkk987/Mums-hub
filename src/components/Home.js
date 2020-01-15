@@ -3,7 +3,7 @@ import { Heading } from "react-bulma-components"
 
 export default function Home() {
 	return (
-		<div className="columns">
+		<div className="columns" data-cy="homepage-content">
             <div className="column">
                 <Heading className="has-text-centered">MUM's HUB</Heading>
                 <h1>

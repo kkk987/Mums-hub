@@ -36,12 +36,12 @@ const BlogPost = props => {
 	
 	return (
         <Fragment>
-            <Section className="content">
+            <Section className="content" data-cy="post-link">
                     <Link to={`/posts/${_id}`}>
                         <Heading>{title}</Heading>
                     </Link>
                     <p><TimeAgo date={modified_date} /></p>
-                    <p>{content}</p>
+                    <p data-cy="post-content">{content}</p>
             </Section>
             {showEditDelete && (
             <div className="level-right">

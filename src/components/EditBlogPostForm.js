@@ -55,8 +55,8 @@ const EditBlogPostForm = ({match, history}) => {
 
 
     return (
-		<form onSubmit={editBlogPost}>
-			<label className="label">Title</label>
+		<form onSubmit={editBlogPost} data-cy="edit-post-form" >
+			<label className="label" >Title</label>
 			<input type="text" className="input" name="title" placeholder="Title" value={values.title}required onChange={handleChange}></input>
 			<label className="label">Content</label>
 			<textarea className="input" name="content" placeholder="What's on your mind?" value={values.content} required onChange={handleChange}></textarea>

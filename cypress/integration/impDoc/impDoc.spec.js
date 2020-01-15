@@ -12,38 +12,39 @@ beforeEach(() => {
     })
 })
 
-describe('Test About page without signin for desktop', ()=> {
-    it('Should go to the about page', ()=>{
-        cy.get("[data-cy=about]").click()
-        cy.url().should('include', '/about')
-        cy.get("[data-cy=about-content]").should('be.visible')
+
+describe('Test disclaim page without signin', ()=> {
+    it('Should go to the disclaim page', ()=>{
+        cy.get("[data-cy=imp-docs]").click()
+        cy.url().should('include', '/impDocs')
+        cy.get("[data-cy=disclaim]").should('be.visible')
     })
 
     it('Should go to the page with url', () => {
         cy.visit('/posts')
-        cy.visit('/about')
-        cy.get("[data-cy=about-content]").should('be.visible')
+        cy.visit('/impDocs')
+        cy.get("[data-cy=disclaim]").should('be.visible')
     })
 })
 
-describe('Test About page with signin for desktop', ()=> {
-    it('Should go to the about page', ()=>{
+describe('Test disclaim page with signin', ()=> {
+    it('Should go to the disclaim page', ()=>{
         // user login
         cy.get("[data-cy=login]").click()
         cy.get("[data-cy=username]").type(fixtures.registeredUser.username)
         cy.get("[data-cy=password]").type(fixtures.registeredUser.password)
         cy.get("[data-cy=loginButton]").click()
         cy.url().should("include", "/posts")
-        // render about page
-        cy.get("[data-cy=about]").click()
-        cy.url().should('include', '/about')
-        cy.get("[data-cy=about-content]").should('be.visible')
+        // render disclaim page
+        cy.get("[data-cy=imp-docs]").click()
+        cy.url().should('include', '/impDocs')
+        cy.get("[data-cy=disclaim]").should('be.visible')
     })
 
     it('Should go to the page with url', () => {
         cy.visit('/posts')
-        cy.visit('/about')
-        cy.get("[data-cy=about-content]").should('be.visible')
+        cy.visit('/impDocs')
+        cy.get("[data-cy=disclaim]").should('be.visible')
     })
 })
 
