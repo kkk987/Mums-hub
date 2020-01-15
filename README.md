@@ -192,7 +192,7 @@ When changes are made, the assigned team member makes appropriate changes on tre
 
 ![user-testing](https://user-images.githubusercontent.com/8579501/72394874-74eaa680-3783-11ea-9a02-7af05af8d48b.png)
 
-#### Unit testings
+#### Unit and integration testings
 cypress link:   
 https://dashboard.cypress.io/projects/rhx85n/runs/1/specs
 
