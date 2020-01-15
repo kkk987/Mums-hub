@@ -34,10 +34,10 @@ const BlogPostForm = (props) => {
     return (
 		<form onSubmit={addNewBlogPost} data-cy="new-post-form">
 			<label className="label">Title</label>
-			<input type="text" className="input" name="title" placeholder="Title" required></input>
+			<input type="text" className="input" data-cy="title" name="title" placeholder="Title" required></input>
 			<label className="label">Content</label>
-			<textarea className="input" name="content" placeholder="What's on your mind?" required></textarea>
-			<input type="submit" value="Create Post" className="button is-info"></input>
+			<textarea className="input" name="content" data-cy="content" placeholder="What's on your mind?" required></textarea>
+			<input type="submit" value="Create Post" data-cy="post-submit" className="button is-info"></input>
 		</form>
 	)
 
